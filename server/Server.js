@@ -17,7 +17,9 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected..."))
   .catch((err) => console.log(err));
 
-
+app.get("/",(req,res)=>{
+  res.send("database is connected with Nodejs")
+})
 
 app.listen(PORT, () => console.log(`Listening at ${PORT}...`));
 
