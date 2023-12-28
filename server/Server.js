@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
+const routes = require("./routes/ToDoroutes");
 const cors = require("cors");
 
 const app = express();
@@ -19,5 +20,5 @@ mongoose
 app.get("/", (req, res) => {
   res.send("database is connected with Nodejs");
 });
-
+app.use("/api", routes);
 app.listen(PORT, () => console.log(`Listening at ${PORT}...`));

@@ -1,19 +1,16 @@
-
-
 import "./App.css";
 import Headingh from "./Compoents/Hedingh";
+import TodoFrom from "./Compoents/TodoForm";
 
 function App() {
  
 
-  return (
-    <>
-      <center>
-        <Headingh></Headingh>
-        <input type="text" placeholder="enter todo" className="inputfield"></input>
+  return<center>
+          <Headingh></Headingh>
+          <TodoFrom></TodoFrom>
+        
       </center>
-    </>
-  );
+   
 }
 
 export default App;
