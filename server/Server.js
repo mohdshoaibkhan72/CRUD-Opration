@@ -2,7 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const routes = require("./routes/ToDoroutes");
+const routes = require("./routes/ToDoRoutes");
+
 const cors = require("cors");
 
 const app = express();
@@ -14,11 +15,9 @@ app.use(cors());
 
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log(" congraculation MongoDB connected..."))
+  .then(() => console.log("MongoDB connected..."))
   .catch((err) => console.log(err));
 
-app.get("/", (req, res) => {
-  res.send("database is connected with Nodejs");
-});
 app.use("/api", routes);
+
 app.listen(PORT, () => console.log(`Listening at ${PORT}...`));
