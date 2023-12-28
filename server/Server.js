@@ -13,7 +13,7 @@ app.use(cors());
 
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected..."))
+  .then(() => console.log(" congraculation MongoDB connected..."))
   .catch((err) => console.log(err));
 
 app.get("/", (req, res) => {

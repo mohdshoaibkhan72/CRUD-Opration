@@ -1,0 +1,22 @@
+*{
+  background-color: aliceblue; 
+}
+
+
+h1{
+  font-size: 80px;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+}
+
+.inputfield{
+  height: 30px;
+  width: 50%;
+  border-style: none;
+  border-bottom: 2px solid black;
+  font-size: 27px;
+  outline-style:none;
+}
